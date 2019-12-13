@@ -1,0 +1,20 @@
+	\begin{tikzpicture}
+		\begin{axis} [
+				width=\textwidth,
+				height=0.7\textheight,
+				xlabel=Temps (Heures),
+				ylabel=$P_aO_2 / F_iO_2$,
+				grid=both,
+				ymin=0,
+				xmin=0,
+				xtick={0,12,...,120},
+				enlarge x limits=false,
+			%	legend=true,
+			%	legend image post style={mark=none}
+				]
+			\addplot table [y=HFPV] {dat/Reper-rounded.csv};
+			\addplot table [y=CMV] {dat/Reper-rounded.csv};
+			\legend{HFPV, CMV};
+		\end{axis}
+	\end{tikzpicture}
+	%\footcite{Reper2002}

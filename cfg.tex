@@ -1,2 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%Packages and library
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
 \usepackage[canadien]{babel}
 \usepackage[backend=biber, autolang=none, style=authoryear, doi=false, url=false, isbn=false]{biblatex}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{backgrounds}
+\usepackage{vdr}
+\usepackage{palettechum}
+\usepackage{logovdr}
+\usepackage{logochum}
+\usetikzlibrary{external}
+\tikzsetexternalprefix{pdffig/}
+%\tikzexternalize
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%Styling
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\setbeamertemplate{navigation symbols}{}
+
+\AtBeginSection[]{
+	\begin{frame}
+		\tableofcontents[currentsection]
+	\end{frame}
+}

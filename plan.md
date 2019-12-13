@@ -2,10 +2,10 @@
 
 ## Description du mode de ventilation
 
-	- Haute et basse fréquences superposées
-	- Adaptation dynamique aux changements de mécanique (phasitron)
-	- Ventilation spontanée permise (Ventilation obligatoire intermitente)
-	- Expiration passive
+- Haute et basse fréquences superposées
+- Adaptation dynamique aux changements de mécanique (phasitron)
+- Ventilation spontanée permise (Ventilation obligatoire intermitente)
+- Expiration passive
 
 ## Quel est l'intérêt
 
@@ -22,5 +22,5 @@
 
 ## Le VDR-4 au CHUM
 
-	- Petite équipe d'inhalothérapeute
-	- Protocole et ordonnance collective
+- Petite équipe d'inhalothérapeute
+- Protocole et ordonnance collective
