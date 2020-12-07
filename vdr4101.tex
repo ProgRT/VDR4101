@@ -1,226 +1,32 @@
-\documentclass[aspectratio=169]{beamer}
+\documentclass[
+	10pt, 
+	aspectratio=169, 
+%	handout
+]{beamer}
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{2 on 1}[letterpaper, border shrink=5mm]
 
-%\includeonly{}
 \input{cfg}
 \input{style}
-\addbibresource{references.bib}
+\addbibresource{ref2.bib}
 
 \title{Le ventilateur VDR-4}
 \subtitle{Ventilation convective-diffusive}
-\author{Nicolas Blais St-Laurent \tiny{inh}}
+\author{Nicolas Blais St-Laurent \scalebox{0.75}{inh}}
 \institute{Service d'inhalothérapie}
 \date{Automne 2019}
-\titlegraphic{\logochum[bleu, denomination, height=1.6cm]\hfill\logofvdr[height=1.6cm, fg=structure.fg]}
 
 \begin{document}
 
-\begin{frame}
-\maketitle
-\end{frame}
+\nbtitlepage
 
 \begin{frame}{Plan de la présentation}
-\tableofcontents
+	\tableofcontents
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Description du mode de ventilation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}{Courbe pression-temps typique}
-	\centering
-	\include{fig/fig-tracept}
-\end{frame}
-
-\begin{frame}{Haute et basse fréquence}
-	\include{fig/fig-lfhf}
-\end{frame}
-
-\begin{frame}{Le phasitron}
-	\include{fig/fig-phasitron-coupe}
-\end{frame}
-
-\begin{frame}{Amplification variable}
-	\include{fig/fig-dilution}
-\end{frame}
-
-\begin{frame}{Pression alvéolaire}
-	\centering
-	\include{fig/fig-plav}
-\end{frame}
-
-\begin{frame}{Pression motrice}
-	\centering
-	\include{fig/fig-pmotrice}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Caractéristiques du mode de ventilation}
-	\begin{itemize}
-		\item Haute et basse fréquence simultanée
-		\item Adaptation dynamique aux changements de mécanique pulmonaire
-		\item Respiration spontanée permise
-		\item Expiration passive
-	\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Intérêt du mode de ventilation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-	\frametitle{Bénéfices escomptés}
-
-	\begin{itemize}
-		\item Ventilation protectrice
-		\item Désencombrement
-		\item Recrutement
-	\end{itemize}
-
-\end{frame}
-
-\begin{frame}
-	\frametitle{Études randomisées}
-	\include{tbl/tbl-etudes}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Chung et col. 2010}
-
-	\begin{block}{Caractéristiques:}
-
-	\begin{itemize}
-		\item Étude randomisée
-		\item VDR-4 \textit{versus} ventilation protectrice
-		\item $n=60$
-		\item Population: brûlés avec ou sans inhaloation
-	\end{itemize}
-	\end{block}
-
-	\begin{block}{Résultats:}
-
-	\begin{itemize}
-		\item Mortalité et durée de ventilation inchangée
-		\item Oxygénation améliorée ($p < .05$)
-		\item Pression de crête et moyenne moins élevée
-		\item Moins de barotrauma (0 \textit{vs} 4, $p=.04$)
-		\item Moins de recours à une thérapie de secours
-		\item Étude interrompue sur une analyse interrimaire
-	\end{itemize}
-	\end{block}
-
-\end{frame}
-
-\begin{frame}
-	\centering
-	\include{fig/fig-chung}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Reper et col.}
-
-	\begin{block}{Caractéristiques:}
-
-	\begin{itemize}
-		\item Étude randomisée
-		\item Population: patients avec brûlure d'inhalation
-		\item VDR-4 \textit{versus} ventilation conventionnelle (10 ml/kg)
-		\item $n=37$
-	\end{itemize}
-	\end{block}
-
-	\begin{block}{Résultats:}
-
-	\begin{itemize}
-		\item Oxygénation améliorée (p $<$ 0.05)
-		\item Pressions de crète, moyenne, et expiratoire comparable
-		\item Mortalitée inchangée
-	\end{itemize}
-	\end{block}
-
-\end{frame}
-
-\begin{frame}
-	\centering
-	\include{fig/fig-reper}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Séries de cas}
-	\include{tbl/tbl-etudes2}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Le VDR-4 au CHUM}
-
-\subsection{Considérations pratiques}
-
-\begin{frame}{Le VDR-4 au CHUM}
-	\begin{itemize}
-		\item Un seul appareil dans l'hôpital
-		\item {\em Três} petite équipe d'inhalo formés
-		\item Ordonnance collective
-		\item Protocole
-	\end{itemize}
-\end{frame}
-
-
-\subsection{Protocole clinique}
-
-\begin{frame}
-	\frametitle{Paramètres de base}
-	\centering
-	\include{tbl/tbl-pbase}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Gestion de l'oxygénation}
-	\centering
-	\include{fig/fig-oxygenation}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Gestion de l'hypercapnie}
-	\centering
-	\begin{enumerate}
-		\item $\downarrow F_{perc}$ \it{ad} 300/min.
-		\item $\uparrow T_{inspi.}$ à 3 sec. et $\downarrow T_{expi.}$ à 1 sec.
-		\item $\uparrow P_{motrice}$ \it{ad} 20 $cmH_2O$
-	\end{enumerate}
-\end{frame}
-
-\begin{frame}
-\frametitle{Références}
-	\printbibliography{}
-\end{frame}
-
-\appendix
-
-\section{Fonctionnement de l'appareil}
-
-\begin{frame}{Cartouche pneumatique}
-	\include{fig/fig-cartouche}
-\end{frame}
-
-\begin{frame}[b]
-	\frametitle{Circuit logique}
-	\centering
-	\includegraphics[height=\textheight]{img/circuit-logique.pdf}
-	\note {Pas si logique que ça}
-\end{frame}
-
-\section{Analyse des tracés pression - temps}
-
-\begin{frame}{Ratio I:E normal et inversé}
-	\include{fig/fig-ie1}
-\end{frame}
-
-\begin{frame}{Ratio I:E normal et inversé}
-	\include{fig/fig-ieimg}
-\end{frame}
-
-\begin{frame}{Augmentation des résistances}
-	\centering
-	\include{fig/fig-raw}
-\end{frame}
+\input{sections/mode.tex}
+\input{sections/interet.tex}
+\input{sections/auchum.tex}
+\input{sections/appendices.tex}
 
 \end{document}

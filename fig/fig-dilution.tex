@@ -1,19 +1,16 @@
 \centering
+\tikzsetnextfilename{dilution}
 \begin{tikzpicture}
 \begin{axis}[
-enlargelimits=false,
-xlabel=Pression \tiny{($cmH_2O$)},
-ylabel=Ratio $\frac{Appel\ d'air}{Air\ inject \acute{e}}$,
-ytick={0,1,2,3,4,5},
-xtick={0,10,20,30,40},
-width=0.4\textwidth,
-height={},
-title=Ratio d'appel d'air théorique du phasitron,
-axis lines=left,
-enlargelimits={0.2, upper},
-font=\small
+		xlabel=Pression \tiny{($cmH_2O$)},
+		ylabel=Ratio $\frac{Appel\ d'air}{Air\ inject \acute{e}}$,
+		width=0.5\textwidth,
+		%height={},
+		%title=Ratio d'appel d'air théorique du phasitron,
+		font=\small,
+		schoolbook
 ]
-	\addplot [mark=none] coordinates {(0,5) (40,0)};
+	\addplot +[very thick] coordinates {(0,5) (40,0)};
 \end{axis}
 \end{tikzpicture}
-\footcite{Percussionairecorporation2009}
+%\footcite{Percussionairecorporation2009}

@@ -1,0 +1,6 @@
+\RequirePackage{fltpoint}
+\fpDecimalSign{.}
+\newcommand{\drawprogressbar}{
+	\fpDiv{\progressfract}{\insertframenumber}{\inserttotalframenumber}
+	\rule{\progressfract\textwidth}{1pt}\\
+}

@@ -3,6 +3,7 @@
 \newcommand{\arrpos}{1.57}
 \def\aShift{4.1cm}
 
+\tikzsetnextfilename{pmotrice}
 \begin{tikzpicture}
 	\begin{axis} [
 			height=0.80\textheight,
@@ -11,14 +12,12 @@
 			extra y tick labels={$P_{exp. moy.}$, $P_{insp. moy.}$},
 			xtick={0,2,4},
 			ytick={0,30},
-			axis x line=bottom,
-			axis y line=middle,
-			enlarge y limits={0.2, upper},
 			extra y tick style={
 				grid=major, 
 			},
 			major grid style={
-			}
+			},
+			schoolbook
 		]
 
 		\addplot +[

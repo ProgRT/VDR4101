@@ -2,7 +2,7 @@
 
 \tikzset{
 	zoomline/.style={
-		opacity=1,
+		opacity=.5,
 		dotted
 	},
 }
@@ -14,6 +14,7 @@
 \def\pstart{7.365}
 \def\tip{0.059}
 
+\tikzsetnextfilename{lfhf}
 \begin{tikzpicture}
 	\begin{groupplot}[
 			group style={
@@ -77,8 +78,10 @@
 
 	\end{groupplot}
 
-	\begin{scope}[on background layer]
-		\fill [opacity=0.1](PSO) -- (PNO) -- (PNE) -- (PSE);
+	\begin{scope}[
+			%on background layer
+		]
+		\fill [opacity=0.075](PSO) rectangle (PNE);
 		\draw [zoomline](ZNO) -- (PNO) (PNE) -- (ZNE) ;
 		\draw [zoomline](ZSO) -- (PSO) (PSE) -- (ZSE) ;
 	\end{scope}

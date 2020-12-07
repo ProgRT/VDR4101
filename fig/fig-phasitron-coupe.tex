@@ -1,38 +1,49 @@
-\begin{columns}
-	\column{0.5\textwidth}
+\tikzset{
+			flow/.style={
+				structure, 
+				->, 
+			},
+			small flow/.style={
+				flow,
+				line width=.2mm,
+			},
+			mid flow/.style={
+				flow,
+				line width=.5mm,
+			},
+			big flow/.style={
+				flow,
+				line width=1mm,
+			},
+}
+%\begin{columns}
+%	\column{0.5\textwidth}
 	\begin{block}{Insuflation}
 		\vspace{.25cm}
 	\begin{tikzpicture}[
-			scale=.60,
-			every node/.style={transform shape}
+			scale=.45,
+			every node/.style={transform shape},
 			]
 
 	\pic [name=P, draw=black!50, fill=gray!10] {phasitron-coupe};
 	\pic {venturi-avance};
+
 	\path (P-S) -- (P-Pt) 
-		node [pos=0.32] (J) {}
-		coordinate [pos=0.15] (D)
+		node [pos=0.32] (Junction) {}
+		coordinate [pos=0.15] (Diafragm)
 		;
 
+	\draw [small flow] (P-S) ++(3mm,0) to (Diafragm);
+	\draw [small flow, shorten <=1mm] (Diafragm) to (Junction);
 
-		\draw [structure, line width=.2mm, ->] (P-S) ++(3mm,0) to (D);
-		\draw [
-			structure, 
-			line width=.2mm,
-			->, 
-shorten <=1mm,
-			] (D) to (J);
+	\draw [
+		mid flow,
+		out=90, 
+		in=-45,
+		shorten >=1mm
+	] (P-A) ++ (0, -3mm)  to (Junction);
 
-		\draw [
-			structure, 
-			line width=.5mm, 
-			->, 
-			out=90, 
-			in=-45,
-			shorten >=1mm
-		] (P-A) ++ (0, -3mm)  to (J);
-
-		\draw [structure, line width=1mm, ->] (J)  to (P-Pt);
+	\draw [big flow] (Junction)  to (P-Pt);
 	
 \end{tikzpicture}
 	\end{block}
@@ -40,12 +51,12 @@ shorten <=1mm,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
-	\column{0.5\textwidth}
+	%\column{0.5\textwidth}
 	\begin{block}{Expiration}
 		\vspace{.25cm}
 
 	\begin{tikzpicture}[
-			scale=.60,
+			scale=.45,
 			every node/.style={transform shape}
 			]
 
@@ -53,9 +64,7 @@ shorten <=1mm,
 	\pic {venturi-recule};
 
 		\draw [
-			structure,
-			line width=1mm, 
-			->, 
+			big flow,
 			out=0, 
 			in=90, 
 			looseness=1.8,
@@ -63,4 +72,4 @@ shorten <=1mm,
 
 \end{tikzpicture}
 	\end{block}
-\end{columns}
+%\end{columns}
